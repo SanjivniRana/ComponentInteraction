@@ -1,0 +1,19 @@
+<h3 style="text-align: center">Child Component </h3>
+<ul class="list-group">
+    <li *ngFor="let customer of customers" class="list-group-item">
+      {{ customer.id }} {{customer.name}} {{customer.email}}
+    </li>
+  </ul>
+  
+  <dl class="row" *ngIf="customerDetail">
+      <dt class="col-md-3">id</dt>
+      <dd class="col-md-6">{{customerDetail.id}}</dd>
+  </dl>
+   <dl class="row" *ngIf="customerDetail">
+       <dt class="col-md-3">name</dt>
+      <dd class="col-md-6">{{customerDetail.name}}</dd>
+   </dl>
+    <dl class="row" *ngIf="customerDetail">
+        <dt class="col-md-3">email</dt>
+      <dd class="col-md-6">{{customerDetail.email}}</dd>
+   </dl>

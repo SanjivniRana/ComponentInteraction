@@ -1,0 +1,24 @@
+
+<main>
+    <h1>  </h1>
+    <h2 style="text-align: center">Parent Component</h2>
+    <h1>  </h1>
+  <table class="table table-responsive table-border table-striped table-hover">
+    <thead class="thead-default">
+      <tr>
+        <th>Customer id</th>
+        <th>Customer Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers" (click)="logDetails(customer)">
+        <th scope="row">{{customer.id}}</th>
+        <td>{{customer.name}}</td>
+        <td>{{customer.email}}</td>
+        
+      </tr>
+    </tbody>
+  </table>
+  <child-selector [customerDetail]='customerDetail'>Details</child-selector>
+</main>
